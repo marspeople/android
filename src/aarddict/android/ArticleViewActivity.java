@@ -309,16 +309,12 @@ public class ArticleViewActivity extends BaseDictionaryActivity {
 		    case NOOK_KEY_PREV_LEFT:
 		    case NOOK_KEY_PREV_RIGHT:
             case KeyEvent.KEYCODE_VOLUME_UP:
-                if (!articleView.pageUp(false)) {
-                    goBack();
-                }
+                articleView.pageUp(false);
                 break;
             case KeyEvent.KEYCODE_VOLUME_DOWN:
 		    case NOOK_KEY_NEXT_LEFT:
 		    case NOOK_KEY_NEXT_RIGHT:
-                if (!articleView.pageDown(false)) {
-                    nextArticle();
-                };
+                articleView.pageDown(false);
                 break;
             default:
                 return super.onKeyDown(keyCode, event);
